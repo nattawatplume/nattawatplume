@@ -4,7 +4,7 @@
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=B983FF&center=true&vCenter=true&width=650&lines=CPE67+%40+KMUTT;C+%2F+ML+%2F+Trading+Systems+Builder;Prepping+for+JUMP+THAILAND+HACKATHON+2026" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=B983FF&center=true&vCenter=true&width=650&lines=CPE67+%40+KMUTT;C+%2F+ML+%2F+Trading+Systems+Builder;Turning+ideas+into+shipped+projects" alt="Typing SVG" />
 
 </div>
 
@@ -19,8 +19,8 @@
 ```
 name     : Nattawat "Plume" Kampilanon
 role     : Computer Engineering, CPE67
-school   : ex. Princess Chulabhorn Science High School, Lopburi
-focus    : embedded systems, ML, quant/trading tools
+school   : ex. Princess Chulabhorn Science HS, Lopburi
+focus    : embedded systems, ML
 ```
 
 </td>
@@ -41,27 +41,16 @@ focus    : embedded systems, ML, quant/trading tools
 <table>
 <tr>
 <td width="33%" valign="top">
-
-** Sniper Bot**
-XAUUSD multi-timeframe trading bot · MT5 + Discord alerts
-
+<h4>⚔️ Sniper Bot</h4>
+<p>XAUUSD multi-timeframe trading bot · MT5 + Discord alerts</p>
 </td>
 <td width="33%" valign="top">
-
-** AI Trader Bot**
-Natural-language strategy parsed via Groq LLM into trade params
-
+<h4> AI Trader Bot</h4>
+<p>Natural-language strategy parsed via Groq LLM into trade params</p>
 </td>
 <td width="33%" valign="top">
-
-** Portfolio**
-Personal site, glassmorphism / aurora UI
-
-</td>
-<td width="33%" valign="top">
-
-*more coming soon...*
-
+<h4> Portfolio</h4>
+<p>Personal site, glassmorphism / aurora UI</p>
 </td>
 </tr>
 </table>
@@ -81,7 +70,7 @@ Personal site, glassmorphism / aurora UI
 
 <div align="center">
 
-### 🔗 Connect
+###  Connect
 
 [![Facebook](https://img.shields.io/badge/Facebook-15092e?style=for-the-badge&logo=facebook&logoColor=B983FF)](https://facebook.com/plume.plume.96558)
 [![Instagram](https://img.shields.io/badge/Instagram-15092e?style=for-the-badge&logo=instagram&logoColor=6EE7FF)](https://instagram.com/plumeeezzz)
