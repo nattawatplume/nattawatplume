@@ -41,7 +41,7 @@ focus    : embedded systems, ML
 <table>
 <tr>
 <td width="33%" valign="top">
-<h4>⚔️ Sniper Bot</h4>
+<h4> Sniper Bot</h4>
 <p>XAUUSD multi-timeframe trading bot · MT5 + Discord alerts</p>
 </td>
 <td width="33%" valign="top">
