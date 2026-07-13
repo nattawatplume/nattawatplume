@@ -18,8 +18,9 @@
 
 ```
 name     : Nattawat "Plume" Kampilanon
-role     : Computer Engineering, CPE67
+role     : Computer Engineering
 school   : Princess Chulabhorn Science High Science, Lopburi
+University : King Mongkut's University of Technology Thonburi
 ```
 
 </td>
