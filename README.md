@@ -14,12 +14,12 @@
 <tr>
 <td width="50%" valign="top">
 
-###  About
+### 🧬 About
 
 ```
 name     : Nattawat Kampilanon
 role     : Computer Engineering
-school   : Princess Chulabhorn Science High School, Lopburi
+school   : ex. Princess Chulabhorn Science High School, Lopburi
 focus    : embedded systems, ML, quant/trading tools
 ```
 
@@ -28,7 +28,7 @@ focus    : embedded systems, ML, quant/trading tools
 
 ###  Stack
 
-<img src="https://skillicons.dev/icons?i=c,python,arduino,fastapi,discord,git&theme=dark" />
+<img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs,c,python,arduino,git&theme=dark" />
 
 </td>
 </tr>
@@ -82,7 +82,7 @@ focus    : embedded systems, ML, quant/trading tools
 
 <div align="center">
 
-###  Connect
+### 🔗 Connect
 
 [![Facebook](https://img.shields.io/badge/Facebook-15092e?style=for-the-badge&logo=facebook&logoColor=B983FF)](https://facebook.com/plume.plume.96558)
 [![Instagram](https://img.shields.io/badge/Instagram-15092e?style=for-the-badge&logo=instagram&logoColor=6EE7FF)](https://instagram.com/plumeeezzz)
