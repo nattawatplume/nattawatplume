@@ -17,10 +17,10 @@
 ###  About
 
 ```
-name     : Nattawat "Plume" Kampilanon
+name     : Nattawat Kampilanon
 role     : Computer Engineering
-school   : Princess Chulabhorn Science High Science, Lopburi
-University : King Mongkut's University of Technology Thonburi
+school   : Princess Chulabhorn Science High School, Lopburi
+focus    : embedded systems, ML, quant/trading tools
 ```
 
 </td>
@@ -41,16 +41,28 @@ University : King Mongkut's University of Technology Thonburi
 <table>
 <tr>
 <td width="33%" valign="top">
-<h4> Sniper Bot</h4>
+<h4><a href="https://github.com/nattawatplume/Xauusd_Bot"> Xauusd_Bot</a></h4>
 <p>XAUUSD multi-timeframe trading bot · MT5 + Discord alerts</p>
 </td>
 <td width="33%" valign="top">
-<h4> AI Trader Bot</h4>
-<p>Natural-language strategy parsed via Groq LLM into trade params</p>
+<h4><a href="https://github.com/nattawatplume/VidMedS_Website"> VidMedS_Website</a></h4>
+<p>Medicine-related web platform · Python</p>
 </td>
 <td width="33%" valign="top">
-<h4> Portfolio</h4>
+<h4><a href="https://github.com/nattawatplume/med-label-web"> med-label-web</a></h4>
+<p>Web app for medicine label reading / management</p>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<h4><a href="https://github.com/nattawatplume/Nattawat_Profile"> Nattawat_Profile</a></h4>
 <p>Personal site, glassmorphism / aurora UI</p>
+</td>
+<td width="33%" valign="top">
+<h4><a href="https://github.com/nattawatplume/Website_aniversary"> Website_aniversary</a></h4>
+<p>Anniversary web project</p>
+</td>
+<td width="33%" valign="top">
 </td>
 </tr>
 </table>
