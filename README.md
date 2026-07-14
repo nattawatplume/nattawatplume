@@ -14,7 +14,7 @@
 <tr>
 <td width="50%" valign="top">
 
-### 🧬 About
+###  About
 
 ```
 name     : Nattawat Kampilanon
