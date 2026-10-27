@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="250" viewBox="0 0 1000 250" role="img" aria-label="What I work on">
+<title>What I work on</title>
+
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0B0A16"/><stop offset="1" stop-color="#05050B"/>
+  </linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.03"/>
+  </linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.38"/>
+    <stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.18"/>
+  </linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#F7E3B5"/><stop offset="0.5" stop-color="#E8C887"/>
+    <stop offset="1" stop-color="#B8925A"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#7C6CFF"/><stop offset="1" stop-color="#2DD4E6"/>
+  </linearGradient>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="60"/>
+  </filter>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+    <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.035 0"/></filter>
+  <g id="blobs" filter="url(#blur)"><circle class="b0" cx="200" cy="250" r="160" fill="#2DD4E6" opacity="0.28"/><circle class="b1" cx="820" cy="0" r="180" fill="#7C6CFF" opacity="0.45"/></g>
+</defs>
+<style>
+  .b0 { animation: drift 18s ease-in-out infinite alternate; }
+  .b1 { animation: drift 24s ease-in-out infinite alternate-reverse; }
+  .b2 { animation: drift 30s ease-in-out infinite alternate; }
+  @keyframes drift { from { transform: translate(0,0); } to { transform: translate(40px,-25px); } }
+  .pulse { animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+  .rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<clipPath id="frame"><rect width="1000" height="250" rx="26"/></clipPath>
+<g clip-path="url(#frame)">
+  <rect width="1000" height="250" fill="url(#bg)"/>
+  <use href="#blobs"/>
+  <rect width="1000" height="250" filter="url(#grain)"/>
+</g>
+<rect x="0.5" y="0.5" width="999" height="249" rx="26" fill="none" stroke="#FFFFFF" stroke-opacity="0.10"/>
+<text x="40" y="46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="600" fill="#E8C887" text-anchor="start" letter-spacing="3">WHAT I WORK ON</text>
+<g class="rise" style="animation-delay:0.00s">
+<rect x="40" y="66" width="296" height="156" rx="18" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M58 66.5 H318" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+<text x="62" y="100" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="22" font-weight="700" fill="url(#gold)" text-anchor="start" letter-spacing="2">SEE</text>
+<text x="314" y="100" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#A09DB3" text-anchor="end" >Computer vision</text>
+<text x="62" y="132" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14.5" font-weight="400" fill="#F4F1EA" text-anchor="start" >Models that recognise pills,</text>
+<text x="62" y="153" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14.5" font-weight="400" fill="#F4F1EA" text-anchor="start" >rocks and robots from a</text>
+<text x="62" y="174" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14.5" font-weight="400" fill="#F4F1EA" text-anchor="start" >plain camera feed.</text>
+<text x="62" y="204" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" font-weight="500" fill="#6E6A85" text-anchor="start" >TFLite · OpenCV · YOLO</text>
+</g>
+<g class="rise" style="animation-delay:0.12s">
+<rect x="354" y="66" width="296" height="156" rx="18" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M372 66.5 H632" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+<text x="376" y="100" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="22" font-weight="700" fill="url(#gold)" text-anchor="start" letter-spacing="2">TALK</text>
+<text x="628" y="100" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#A09DB3" text-anchor="end" >Chatbots that behave</text>
+<text x="376" y="132" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14.5" font-weight="400" fill="#F4F1EA" text-anchor="start" >LLM bots that answer from</text>
+<text x="376" y="153" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14.5" font-weight="400" fill="#F4F1EA" text-anchor="start" >real data only, with safety</text>
+<text x="376" y="174" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14.5" font-weight="400" fill="#F4F1EA" text-anchor="start" >rails for the risky stuff.</text>
+<text x="376" y="204" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" font-weight="500" fill="#6E6A85" text-anchor="start" >FastAPI · LINE · Typhoon</text>
+</g>
+<g class="rise" style="animation-delay:0.24s">
+<rect x="668" y="66" width="296" height="156" rx="18" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M686 66.5 H946" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+<text x="690" y="100" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="22" font-weight="700" fill="url(#gold)" text-anchor="start" letter-spacing="2">TRADE</text>
+<text x="942" y="100" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="12.5" font-weight="500" fill="#A09DB3" text-anchor="end" >Trading systems</text>
+<text x="690" y="132" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14.5" font-weight="400" fill="#F4F1EA" text-anchor="start" >Research bots on MT5 where</text>
+<text x="690" y="153" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14.5" font-weight="400" fill="#F4F1EA" text-anchor="start" >the AI suggests and strict</text>
+<text x="690" y="174" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14.5" font-weight="400" fill="#F4F1EA" text-anchor="start" >rules decide.</text>
+<text x="690" y="204" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" font-weight="500" fill="#6E6A85" text-anchor="start" >MQL5 · Python · Ollama</text>
+</g>
+</svg>

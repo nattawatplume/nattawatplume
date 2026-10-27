@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img" aria-label="Nattawat Kampilanon">
+<title>Nattawat Kampilanon</title>
+
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0B0A16"/><stop offset="1" stop-color="#05050B"/>
+  </linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.03"/>
+  </linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.38"/>
+    <stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.18"/>
+  </linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#F7E3B5"/><stop offset="0.5" stop-color="#E8C887"/>
+    <stop offset="1" stop-color="#B8925A"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#7C6CFF"/><stop offset="1" stop-color="#2DD4E6"/>
+  </linearGradient>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="60"/>
+  </filter>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+    <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.035 0"/></filter>
+  <g id="blobs" filter="url(#blur)"><circle class="b0" cx="120" cy="60" r="200" fill="#7C6CFF" opacity="0.55"/><circle class="b1" cx="980" cy="380" r="220" fill="#2DD4E6" opacity="0.35"/><circle class="b2" cx="640" cy="40" r="140" fill="#E8C887" opacity="0.22"/></g>
+</defs>
+<style>
+  .b0 { animation: drift 18s ease-in-out infinite alternate; }
+  .b1 { animation: drift 24s ease-in-out infinite alternate-reverse; }
+  .b2 { animation: drift 30s ease-in-out infinite alternate; }
+  @keyframes drift { from { transform: translate(0,0); } to { transform: translate(40px,-25px); } }
+  .pulse { animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+  .rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<clipPath id="frame"><rect width="1000" height="420" rx="26"/></clipPath>
+<g clip-path="url(#frame)">
+  <rect width="1000" height="420" fill="url(#bg)"/>
+  <use href="#blobs"/>
+  <rect width="1000" height="420" filter="url(#grain)"/>
+</g>
+<rect x="0.5" y="0.5" width="999" height="419" rx="26" fill="none" stroke="#FFFFFF" stroke-opacity="0.10"/>
+<g class="rise">
+<circle class="pulse" cx="62" cy="64" r="4.5" fill="#5BE3A8"/>
+<text x="76" y="69" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="500" fill="#A09DB3" text-anchor="start" letter-spacing="1.5">CURRENTLY BUILDING GEMBOT &amp; VISMEDS</text>
+<text x="56" y="150" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="64" font-weight="700" fill="#F4F1EA" text-anchor="start" letter-spacing="-1.5">Nattawat</text>
+<text x="56" y="218" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="64" font-weight="700" fill="url(#gold)" text-anchor="start" letter-spacing="-1.5">Kampilanon</text>
+<text x="56" y="268" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="22" font-weight="500" fill="#F4F1EA" text-anchor="start" >I build things that see, talk and trade.</text>
+<text x="56" y="302" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="15.5" font-weight="400" fill="#A09DB3" text-anchor="start" >Computer Engineering student at KMUTT. I like taking an idea</text>
+<text x="56" y="325" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="15.5" font-weight="400" fill="#A09DB3" text-anchor="start" >off the whiteboard and making it actually run, on a phone,</text>
+<text x="56" y="348" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="15.5" font-weight="400" fill="#A09DB3" text-anchor="start" >on a robot, or on a live trading chart.</text>
+<text x="56" y="384" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14" font-weight="400" fill="#6E6A85" text-anchor="start" >นักศึกษาวิศวะคอมฯ มจธ. ชอบทำของที่เอาไปใช้ได้จริง</text>
+</g>
+<g class="rise" style="animation-delay:.15s">
+<rect x="616" y="56" width="336" height="308" rx="22" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M638 56.5 H930" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+<text x="640" y="94" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#E8C887" text-anchor="start" letter-spacing="3">ID</text>
+<text x="928" y="94" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" font-weight="500" fill="#6E6A85" text-anchor="end" >@nattawatplume</text>
+<circle cx="668" cy="144" r="28" fill="url(#aurora)" opacity=".9"/>
+<text x="668" y="152" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="24" font-weight="700" fill="#0B0A16" text-anchor="middle" >P</text>
+<text x="710" y="140" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="20" font-weight="600" fill="#F4F1EA" text-anchor="start" >Plume</text>
+<text x="710" y="160" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#A09DB3" text-anchor="start" >Computer Engineering</text>
+<path d="M640 192 H928" stroke="#FFFFFF" stroke-opacity=".1"/>
+<text x="640" y="224" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#6E6A85" text-anchor="start" letter-spacing="1.2">STUDYING</text>
+<text x="724" y="224" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >Computer Engineering, KMUTT</text>
+<text x="640" y="258" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#6E6A85" text-anchor="start" letter-spacing="1.2">ALUMNI</text>
+<text x="724" y="258" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >PCSHS Lopburi</text>
+<text x="640" y="292" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#6E6A85" text-anchor="start" letter-spacing="1.2">INTO</text>
+<text x="724" y="292" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >Vision · Robotics · Trading</text>
+<text x="640" y="326" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="10.5" font-weight="600" fill="#6E6A85" text-anchor="start" letter-spacing="1.2">SPEAKS</text>
+<text x="724" y="326" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >Thai · English</text>
+</g>
+</svg>

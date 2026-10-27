@@ -1,94 +1,37 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0F0524,50:2D1B69,100:1B2C6B&height=180&section=header&text=NATTAWAT%20KAMPILANON&fontSize=42&fontColor=B983FF&animation=fadeIn&fontAlignY=38&desc=Computer%20Engineering%20%40%20KMUTT%20%C2%B7%20Plume&descAlignY=58&descSize=16&descColor=6EE7FF" />
+<img src="assets/hero.svg" width="100%" alt="Nattawat Kampilanon (Plume). Computer Engineering student at KMUTT. I build things that see, talk and trade." />
 
-<br>
+<img src="assets/focus.svg" width="100%" alt="What I work on: computer vision, chatbots that behave, trading systems" />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=B983FF&center=true&vCenter=true&width=650&lines=CPE67+%40+KMUTT;C+%2F+ML+%2F+Trading+Systems+Builder;Turning+ideas+into+shipped+projects" alt="Typing SVG" />
+<img src="assets/dashboard.svg" width="100%" alt="Live GitHub dashboard: contributions, streaks, repos and languages" />
 
-</div>
+<br/>
 
-<br>
+<a href="https://github.com/nattawatplume/VisMedS_LineChatBot"><img src="assets/projects/vismeds.svg" width="49%" alt="VisMedS: snap a photo of a medicine and get the facts" /></a>
+<a href="https://github.com/nattawatplume/Gembot_Robot"><img src="assets/projects/gembot.svg" width="49%" alt="Gembot Robot: a camera-guided robot that collects rocks on its own" /></a>
+<a href="https://github.com/nattawatplume/Xauusd_Bot"><img src="assets/projects/xauusd.svg" width="49%" alt="XAUUSD AI Trader: gold trading research on MetaTrader 5" /></a>
+<a href="https://github.com/nattawatplume/ai_genworldGame"><img src="assets/projects/genworld.svg" width="49%" alt="AI GenWorld: a city-building game for classrooms" /></a>
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<sub>
+VisMedS also has a <a href="https://nattawatplume.github.io/med-label-web/">label search site</a> and an <a href="https://github.com/nattawatplume/VidMedS_Website">image analyzer</a>
+&nbsp;·&nbsp; Smaller builds: <a href="https://github.com/nattawatplume/portfolio">portfolio</a>, <a href="https://github.com/nattawatplume/Nattawat_Profile">profile site</a>, <a href="https://nattawatplume.github.io/Website_aniversary/">anniversary site</a>
+</sub>
 
-###  About
+<br/><br/>
 
-```
-name     : Nattawat Kampilanon
-role     : Computer Engineering
-school   : ex. Princess Chulabhorn Science High School, Lopburi
-focus    : embedded systems, ML, quant/trading tools
-```
+<img src="assets/stack.svg" width="100%" alt="Toolbox: Python, C, C++, TypeScript, JavaScript, MQL5, React, FastAPI, OpenCV, TensorFlow and more" />
 
-</td>
-<td width="50%" valign="top">
+<br/><br/>
 
-###  Stack
+<a href="https://nattawatplume.github.io/portfolio/"><img src="assets/links/portfolio.svg" height="48" alt="Portfolio" /></a>
+<a href="https://www.linkedin.com/in/nattawat-kampilanon-716553421/"><img src="assets/links/linkedin.svg" height="48" alt="LinkedIn" /></a>
+<a href="mailto:nattawatplume@gmail.com"><img src="assets/links/email.svg" height="48" alt="Email" /></a>
+<a href="https://www.instagram.com/plumeeezzz/"><img src="assets/links/instagram.svg" height="48" alt="Instagram" /></a>
+<a href="https://www.facebook.com/plume.plume.96558/"><img src="assets/links/facebook.svg" height="48" alt="Facebook" /></a>
 
-<img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs,c,python,arduino,git&theme=dark" />
+<br/><br/>
 
-</td>
-</tr>
-</table>
-
-<br>
-
-###  Projects
-
-<table>
-<tr>
-<td width="33%" valign="top">
-<h4><a href="https://github.com/nattawatplume/Xauusd_Bot"> Xauusd_Bot</a></h4>
-<p>XAUUSD multi-timeframe trading bot · MT5 + Discord alerts</p>
-</td>
-<td width="33%" valign="top">
-<h4><a href="https://github.com/nattawatplume/VidMedS_Website"> VidMedS_Website</a></h4>
-<p>Medicine-related web platform · Python</p>
-</td>
-<td width="33%" valign="top">
-<h4><a href="https://github.com/nattawatplume/med-label-web"> med-label-web</a></h4>
-<p>Web app for medicine label reading / management</p>
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top">
-<h4><a href="https://github.com/nattawatplume/Nattawat_Profile"> Nattawat_Profile</a></h4>
-<p>Personal site, glassmorphism / aurora UI</p>
-</td>
-<td width="33%" valign="top">
-<h4><a href="https://github.com/nattawatplume/Website_aniversary"> Website_aniversary</a></h4>
-<p>Anniversary web project</p>
-</td>
-<td width="33%" valign="top">
-</td>
-</tr>
-</table>
-
-<br>
-
-<div align="center">
-
-###  Stats
-
-<img src="https://github-readme-stats.vercel.app/api?username=nattawatplume&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0F0524&title_color=B983FF&icon_color=6EE7FF&text_color=c9d1d9&count_private=true" width="47%" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=nattawatplume&theme=tokyonight&hide_border=true&background=0F0524&ring=B983FF&fire=6EE7FF&currStreakLabel=B983FF" width="47%" />
+<img src="assets/footer.svg" width="100%" alt="Thanks for stopping by" />
 
 </div>
-
-<br>
-
-<div align="center">
-
-### 🔗 Connect
-
-[![Facebook](https://img.shields.io/badge/Facebook-15092e?style=for-the-badge&logo=facebook&logoColor=B983FF)](https://facebook.com/plume.plume.96558)
-[![Instagram](https://img.shields.io/badge/Instagram-15092e?style=for-the-badge&logo=instagram&logoColor=6EE7FF)](https://instagram.com/plumeeezzz)
-
-</div>
-
-<br>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1B2C6B,50:2D1B69,100:0F0524&height=100&section=footer" />

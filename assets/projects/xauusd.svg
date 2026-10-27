@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="300" viewBox="0 0 490 300" role="img" aria-label="XAUUSD AI Trader">
+<title>XAUUSD AI Trader</title>
+
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0B0A16"/><stop offset="1" stop-color="#05050B"/>
+  </linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.03"/>
+  </linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.38"/>
+    <stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.18"/>
+  </linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#F7E3B5"/><stop offset="0.5" stop-color="#E8C887"/>
+    <stop offset="1" stop-color="#B8925A"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#7C6CFF"/><stop offset="1" stop-color="#2DD4E6"/>
+  </linearGradient>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="60"/>
+  </filter>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+    <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.035 0"/></filter>
+  <g id="blobs" filter="url(#blur)"><circle class="b0" cx="430" cy="30" r="130" fill="#E8C887" opacity="0.55"/><circle class="b1" cx="40" cy="300" r="120" fill="#7C6CFF" opacity="0.3"/></g>
+</defs>
+<style>
+  .b0 { animation: drift 18s ease-in-out infinite alternate; }
+  .b1 { animation: drift 24s ease-in-out infinite alternate-reverse; }
+  .b2 { animation: drift 30s ease-in-out infinite alternate; }
+  @keyframes drift { from { transform: translate(0,0); } to { transform: translate(40px,-25px); } }
+  .pulse { animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+  .rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<clipPath id="frame"><rect width="490" height="300" rx="26"/></clipPath>
+<g clip-path="url(#frame)">
+  <rect width="490" height="300" fill="url(#bg)"/>
+  <use href="#blobs"/>
+  <rect width="490" height="300" filter="url(#grain)"/>
+</g>
+<rect x="0.5" y="0.5" width="489" height="299" rx="26" fill="none" stroke="#FFFFFF" stroke-opacity="0.10"/>
+<rect x="18" y="18" width="454" height="264" rx="20" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M38 18.5 H452" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+<rect x="40" y="40" width="69" height="24.5" rx="12.25" fill="#FFFFFF" fill-opacity="0.07" stroke="#FFFFFF" stroke-opacity="0.12"/><text x="52" y="56.03" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="10.5" font-weight="500" fill="#A09DB3" text-anchor="start" >TRADING</text>
+<rect x="116.83500000000001" y="40" width="87" height="24.5" rx="12.25" fill="#FFFFFF" fill-opacity="0.07" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="130.835" cy="52.25" r="3.5" fill="#E8C887"/><text x="140.835" y="56.03" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="10.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >Research</text>
+<text x="448" y="60" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="20" font-weight="500" fill="#E8C887" text-anchor="end" >↗</text>
+<text x="40" y="112" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="28" font-weight="700" fill="#F4F1EA" text-anchor="start" letter-spacing="-.5">XAUUSD AI Trader</text>
+<text x="40" y="146" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14" font-weight="400" fill="#A09DB3" text-anchor="start" >Gold trading research on MetaTrader 5.</text>
+<text x="40" y="167" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14" font-weight="400" fill="#A09DB3" text-anchor="start" >An AI can suggest a trade, but the EA checks</text>
+<text x="40" y="188" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14" font-weight="400" fill="#A09DB3" text-anchor="start" >every one and says no if anything looks off.</text>
+<text x="40" y="209" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14" font-weight="400" fill="#A09DB3" text-anchor="start" >Not proven profitable, and I&#x27;m upfront about it.</text>
+<rect x="40" y="236" width="51" height="25" rx="12.5" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.12"/><text x="52" y="252.46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" font-weight="500" fill="#F4F1EA" text-anchor="start" >MQL5</text>
+<rect x="98.84" y="236" width="64" height="25" rx="12.5" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.12"/><text x="110.84" y="252.46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" font-weight="500" fill="#F4F1EA" text-anchor="start" >Python</text>
+<rect x="171.1" y="236" width="64" height="25" rx="12.5" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.12"/><text x="183.1" y="252.46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" font-weight="500" fill="#F4F1EA" text-anchor="start" >Ollama</text>
+<rect x="243.35999999999999" y="236" width="64" height="25" rx="12.5" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.12"/><text x="255.35999999999999" y="252.46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" font-weight="500" fill="#F4F1EA" text-anchor="start" >Gemini</text>
+</svg>

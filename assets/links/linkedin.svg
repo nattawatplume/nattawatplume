@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="56" viewBox="0 0 180 56" role="img" aria-label="LinkedIn"><title>LinkedIn</title>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0B0A16"/><stop offset="1" stop-color="#05050B"/>
+  </linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.03"/>
+  </linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.38"/>
+    <stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0.08"/>
+    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.18"/>
+  </linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#F7E3B5"/><stop offset="0.5" stop-color="#E8C887"/>
+    <stop offset="1" stop-color="#B8925A"/>
+  </linearGradient>
+  <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#7C6CFF"/><stop offset="1" stop-color="#2DD4E6"/>
+  </linearGradient>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="60"/>
+  </filter>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+    <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.035 0"/></filter>
+  <g id="blobs" filter="url(#blur)"></g>
+</defs>
+<style>
+  .b0 { animation: drift 18s ease-in-out infinite alternate; }
+  .b1 { animation: drift 24s ease-in-out infinite alternate-reverse; }
+  .b2 { animation: drift 30s ease-in-out infinite alternate; }
+  @keyframes drift { from { transform: translate(0,0); } to { transform: translate(40px,-25px); } }
+  .pulse { animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+  .rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style><rect x="0.5" y="0.5" width="179" height="55" rx="28" fill="url(#bg)" stroke="url(#edge)"/><rect x="0.5" y="0.5" width="179" height="55" rx="28" fill="url(#glass)"/><g transform="translate(34 28)"><rect x="-8" y="-8" width="16" height="16" rx="3.5" fill="#F4F1EA"/><text x="0" y="4.5" font-family="Arial" font-weight="700" font-size="10.5" fill="#0B0A16" text-anchor="middle">in</text></g><text x="56" y="33" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="14.5" font-weight="600" fill="#F4F1EA" text-anchor="start" >LinkedIn</text></svg>
