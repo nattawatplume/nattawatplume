@@ -47,15 +47,15 @@
 </g>
 <rect x="0.5" y="0.5" width="999" height="379" rx="26" fill="none" stroke="#FFFFFF" stroke-opacity="0.10"/>
 <text x="40" y="46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="600" fill="#E8C887" text-anchor="start" letter-spacing="3">LIVE DASHBOARD</text>
-<text x="960" y="46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" font-weight="500" fill="#6E6A85" text-anchor="end" >updated 30 Oct 2026</text>
+<text x="960" y="46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11" font-weight="500" fill="#6E6A85" text-anchor="end" >updated 31 Oct 2026</text>
 <g class="rise" style="animation-delay:0.00s">
 <rect x="40" y="66" width="215" height="104" rx="18" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M58 66.5 H237" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
-<text x="62" y="124" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="38" font-weight="700" fill="url(#gold)" text-anchor="start" letter-spacing="-1">95</text>
+<text x="62" y="124" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="38" font-weight="700" fill="url(#gold)" text-anchor="start" letter-spacing="-1">108</text>
 <text x="62" y="150" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#A09DB3" text-anchor="start" >contributions this year</text>
 </g>
 <g class="rise" style="animation-delay:0.08s">
 <rect x="275" y="66" width="215" height="104" rx="18" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M293 66.5 H472" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
-<text x="297" y="124" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="38" font-weight="700" fill="#F4F1EA" text-anchor="start" letter-spacing="-1">18</text>
+<text x="297" y="124" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="38" font-weight="700" fill="#F4F1EA" text-anchor="start" letter-spacing="-1">19</text>
 <text x="297" y="150" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="12.5" font-weight="400" fill="#A09DB3" text-anchor="start" >active days this year</text>
 </g>
 <g class="rise" style="animation-delay:0.16s">
@@ -278,23 +278,24 @@
 <rect x="508.6" y="264.8" width="12" height="12" rx="3" fill="#E8C887" fill-opacity="1"/>
 <rect x="508.6" y="280.2" width="12" height="12" rx="3" fill="#E8C887" fill-opacity="1"/>
 <rect x="508.6" y="295.6" width="12" height="12" rx="3" fill="#8B7BFF" fill-opacity="1"/>
-<rect x="508.6" y="311.0" width="12" height="12" rx="3" fill="#FFFFFF" fill-opacity=".06"/>
+<rect x="508.6" y="311.0" width="12" height="12" rx="3" fill="#E8C887" fill-opacity="1"/>
+<rect x="508.6" y="326.4" width="12" height="12" rx="3" fill="#FFFFFF" fill-opacity=".06"/>
 <rect x="580" y="190" width="380" height="160" rx="18" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M598 190.5 H942" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
 <text x="602" y="218" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13" font-weight="600" fill="#A09DB3" text-anchor="start" >Code in my repos</text>
-<rect x="602.0" y="236" width="264.0" height="8" rx="4" fill="#7C9CFF"/>
-<rect x="868.0" y="236" width="31.5" height="8" rx="4" fill="#E8C887"/>
-<rect x="901.5" y="236" width="19.9" height="8" rx="4" fill="#5BE3A8"/>
-<rect x="923.4" y="236" width="8.3" height="8" rx="4" fill="#2DD4E6"/>
-<rect x="933.7" y="236" width="1.0" height="8" rx="4" fill="#F27BC0"/>
+<rect x="602.0" y="236" width="268.6" height="8" rx="4" fill="#7C9CFF"/>
+<rect x="872.6" y="236" width="29.3" height="8" rx="4" fill="#E8C887"/>
+<rect x="903.9" y="236" width="18.5" height="8" rx="4" fill="#5BE3A8"/>
+<rect x="924.4" y="236" width="7.6" height="8" rx="4" fill="#2DD4E6"/>
+<rect x="934.0" y="236" width="1.0" height="8" rx="4" fill="#F27BC0"/>
 <circle cx="607" cy="268" r="4.5" fill="#7C9CFF"/>
 <text x="620" y="272" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13" font-weight="500" fill="#F4F1EA" text-anchor="start" >Python</text>
-<text x="752" y="272" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="500" fill="#6E6A85" text-anchor="end" >79%</text>
+<text x="752" y="272" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="500" fill="#6E6A85" text-anchor="end" >81%</text>
 <circle cx="777" cy="268" r="4.5" fill="#E8C887"/>
 <text x="790" y="272" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13" font-weight="500" fill="#F4F1EA" text-anchor="start" >JavaScript</text>
-<text x="922" y="272" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="500" fill="#6E6A85" text-anchor="end" >10%</text>
+<text x="922" y="272" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="500" fill="#6E6A85" text-anchor="end" >9%</text>
 <circle cx="607" cy="294" r="4.5" fill="#5BE3A8"/>
 <text x="620" y="298" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13" font-weight="500" fill="#F4F1EA" text-anchor="start" >MQL5</text>
-<text x="752" y="298" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="500" fill="#6E6A85" text-anchor="end" >7%</text>
+<text x="752" y="298" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="500" fill="#6E6A85" text-anchor="end" >6%</text>
 <circle cx="777" cy="294" r="4.5" fill="#2DD4E6"/>
 <text x="790" y="298" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13" font-weight="500" fill="#F4F1EA" text-anchor="start" >TypeScript</text>
 <text x="922" y="298" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="500" fill="#6E6A85" text-anchor="end" >3%</text>
