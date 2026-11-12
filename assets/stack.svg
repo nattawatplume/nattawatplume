@@ -1,32 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="250" viewBox="0 0 1000 250" role="img" aria-label="Toolbox">
-<title>Toolbox</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="210" viewBox="0 0 1000 210" role="img" aria-label="Stack">
+<title>Stack</title>
 
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#0B0A16"/><stop offset="1" stop-color="#05050B"/>
+    <stop offset="0" stop-color="#140C07"/><stop offset="1" stop-color="#070504"/>
   </linearGradient>
   <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
-    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    <stop offset="0" stop-color="#FFF4E8" stop-opacity="0.10"/>
+    <stop offset="1" stop-color="#FFF4E8" stop-opacity="0.025"/>
   </linearGradient>
   <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.38"/>
-    <stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0.08"/>
-    <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.18"/>
+    <stop offset="0" stop-color="#FFE2C2" stop-opacity="0.42"/>
+    <stop offset="0.45" stop-color="#FFE2C2" stop-opacity="0.07"/>
+    <stop offset="1" stop-color="#FF7A1A" stop-opacity="0.30"/>
   </linearGradient>
-  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#F7E3B5"/><stop offset="0.5" stop-color="#E8C887"/>
-    <stop offset="1" stop-color="#B8925A"/>
+  <linearGradient id="fire" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFD9A8"/><stop offset="0.45" stop-color="#FFB547"/>
+    <stop offset="1" stop-color="#FF7A1A"/>
   </linearGradient>
-  <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#7C6CFF"/><stop offset="1" stop-color="#2DD4E6"/>
+  <linearGradient id="heat" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FFB547"/><stop offset="1" stop-color="#FF4D2E"/>
   </linearGradient>
   <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="60"/>
+    <feGaussianBlur stdDeviation="62"/>
   </filter>
   <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
-    <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.035 0"/></filter>
-  <g id="blobs" filter="url(#blur)"><circle class="b0" cx="80" cy="40" r="150" fill="#E8C887" opacity="0.18"/><circle class="b1" cx="950" cy="230" r="170" fill="#7C6CFF" opacity="0.45"/></g>
+    <feColorMatrix values="0 0 0 0 1  0 0 0 0 0.9  0 0 0 0 0.8  0 0 0 0.04 0"/></filter>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+    <path d="M32 0 H0 V32" fill="none" stroke="#FFFFFF" stroke-opacity="0.035"/>
+  </pattern>
+  <g id="blobs" filter="url(#blur)"><circle class="b0" cx="60" cy="30" r="150" fill="#FFB547" opacity="0.22"/><circle class="b1" cx="960" cy="200" r="170" fill="#FF7A1A" opacity="0.45"/></g>
 </defs>
 <style>
   .b0 { animation: drift 18s ease-in-out infinite alternate; }
@@ -34,46 +37,46 @@
   .b2 { animation: drift 30s ease-in-out infinite alternate; }
   @keyframes drift { from { transform: translate(0,0); } to { transform: translate(40px,-25px); } }
   .pulse { animation: pulse 2.4s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
   .rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
   @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
 </style>
-<clipPath id="frame"><rect width="1000" height="250" rx="26"/></clipPath>
+<clipPath id="frame"><rect width="1000" height="210" rx="24"/></clipPath>
 <g clip-path="url(#frame)">
-  <rect width="1000" height="250" fill="url(#bg)"/>
+  <rect width="1000" height="210" fill="url(#bg)"/>
+  <rect width="1000" height="210" fill="url(#grid)"/>
   <use href="#blobs"/>
-  <rect width="1000" height="250" filter="url(#grain)"/>
+  <rect width="1000" height="210" filter="url(#grain)"/>
 </g>
-<rect x="0.5" y="0.5" width="999" height="249" rx="26" fill="none" stroke="#FFFFFF" stroke-opacity="0.10"/>
-<text x="40" y="46" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="600" fill="#E8C887" text-anchor="start" letter-spacing="3">TOOLBOX</text>
-<rect x="40" y="74" width="920" height="44" rx="22" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M62 74.5 H938" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
-<text x="62" y="101" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13" font-weight="600" fill="#A09DB3" text-anchor="start" >Languages</text>
-<rect x="184" y="83" width="78" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="198" cy="95.75" r="3.5" fill="#E8C887"/><text x="208" y="99.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >Python</text>
-<rect x="270.09000000000003" y="83" width="43" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="284.09000000000003" cy="95.75" r="3.5" fill="#E8C887"/><text x="294.09000000000003" y="99.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >C</text>
-<rect x="321.105" y="83" width="57" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="335.105" cy="95.75" r="3.5" fill="#E8C887"/><text x="345.105" y="99.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >C++</text>
-<rect x="386.15000000000003" y="83" width="106" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="400.15000000000003" cy="95.75" r="3.5" fill="#E8C887"/><text x="410.15000000000003" y="99.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >TypeScript</text>
-<rect x="500.3" y="83" width="106" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="514.3" cy="95.75" r="3.5" fill="#E8C887"/><text x="524.3" y="99.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >JavaScript</text>
-<rect x="614.45" y="83" width="64" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="628.45" cy="95.75" r="3.5" fill="#E8C887"/><text x="638.45" y="99.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >MQL5</text>
-<rect x="686.51" y="83" width="92" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="700.51" cy="95.75" r="3.5" fill="#E8C887"/><text x="710.51" y="99.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >HTML/CSS</text>
-<rect x="40" y="130" width="920" height="44" rx="22" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M62 130.5 H938" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
-<text x="62" y="157" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13" font-weight="600" fill="#A09DB3" text-anchor="start" >Building with</text>
-<rect x="184" y="139" width="71" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="198" cy="151.75" r="3.5" fill="#2DD4E6"/><text x="208" y="155.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >React</text>
-<rect x="263.075" y="139" width="85" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="277.075" cy="151.75" r="3.5" fill="#2DD4E6"/><text x="287.075" y="155.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >FastAPI</text>
-<rect x="356.17999999999995" y="139" width="71" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="370.17999999999995" cy="151.75" r="3.5" fill="#2DD4E6"/><text x="380.17999999999995" y="155.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >Flask</text>
-<rect x="435.25499999999994" y="139" width="85" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="449.25499999999994" cy="151.75" r="3.5" fill="#2DD4E6"/><text x="459.25499999999994" y="155.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >Node.js</text>
-<rect x="528.3599999999999" y="139" width="106" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="542.3599999999999" cy="151.75" r="3.5" fill="#2DD4E6"/><text x="552.3599999999999" y="155.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >TensorFlow</text>
-<rect x="642.5099999999999" y="139" width="78" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="656.5099999999999" cy="151.75" r="3.5" fill="#2DD4E6"/><text x="666.5099999999999" y="155.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >OpenCV</text>
-<rect x="728.5999999999999" y="139" width="64" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="742.5999999999999" cy="151.75" r="3.5" fill="#2DD4E6"/><text x="752.5999999999999" y="155.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >YOLO</text>
-<rect x="800.6599999999999" y="139" width="99" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="814.6599999999999" cy="151.75" r="3.5" fill="#2DD4E6"/><text x="824.6599999999999" y="155.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >MediaPipe</text>
-<rect x="40" y="186" width="920" height="44" rx="22" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M62 186.5 H938" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
-<text x="62" y="213" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13" font-weight="600" fill="#A09DB3" text-anchor="start" >Tools</text>
-<rect x="184" y="195" width="57" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="198" cy="207.75" r="3.5" fill="#7C6CFF"/><text x="208" y="211.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >Git</text>
-<rect x="249.04500000000002" y="195" width="78" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="263.045" cy="207.75" r="3.5" fill="#7C6CFF"/><text x="273.045" y="211.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >Docker</text>
-<rect x="335.135" y="195" width="106" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="349.135" cy="207.75" r="3.5" fill="#7C6CFF"/><text x="359.135" y="211.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >PostgreSQL</text>
-<rect x="449.28499999999997" y="195" width="78" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="463.28499999999997" cy="207.75" r="3.5" fill="#7C6CFF"/><text x="473.28499999999997" y="211.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >SQLite</text>
-<rect x="535.375" y="195" width="71" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="549.375" cy="207.75" r="3.5" fill="#7C6CFF"/><text x="559.375" y="211.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >ESP32</text>
-<rect x="614.45" y="195" width="120" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="628.45" cy="207.75" r="3.5" fill="#7C6CFF"/><text x="638.45" y="211.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >MetaTrader 5</text>
-<rect x="742.6300000000001" y="195" width="78" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="756.6300000000001" cy="207.75" r="3.5" fill="#7C6CFF"/><text x="766.6300000000001" y="211.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >Ollama</text>
-<rect x="828.7200000000001" y="195" width="106" height="25.5" rx="12.75" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/><circle cx="842.7200000000001" cy="207.75" r="3.5" fill="#7C6CFF"/><text x="852.7200000000001" y="211.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F4F1EA" text-anchor="start" >Gemini API</text>
+<rect x="0.5" y="0.5" width="999" height="209" rx="24" fill="none" stroke="#FFD9A8" stroke-opacity="0.12"/>
+<rect x="30" y="30" width="940" height="44" rx="22" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M52 30.5 H948" stroke="#FFF4E8" stroke-opacity="0.4" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="57" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13" font-weight="600" fill="#B3A496" text-anchor="start" >Languages</text>
+<rect x="170" y="39" width="78" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="184" cy="51.75" r="3.5" fill="#FF7A1A"/><text x="194" y="55.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >Python</text>
+<rect x="256.09000000000003" y="39" width="43" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="270.09000000000003" cy="51.75" r="3.5" fill="#FF7A1A"/><text x="280.09000000000003" y="55.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >C</text>
+<rect x="307.105" y="39" width="57" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="321.105" cy="51.75" r="3.5" fill="#FF7A1A"/><text x="331.105" y="55.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >C++</text>
+<rect x="372.15000000000003" y="39" width="50" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="386.15000000000003" cy="51.75" r="3.5" fill="#FF7A1A"/><text x="396.15000000000003" y="55.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >C#</text>
+<rect x="430.18000000000006" y="39" width="106" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="444.18000000000006" cy="51.75" r="3.5" fill="#FF7A1A"/><text x="454.18000000000006" y="55.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >TypeScript</text>
+<rect x="544.33" y="39" width="106" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="558.33" cy="51.75" r="3.5" fill="#FF7A1A"/><text x="568.33" y="55.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >JavaScript</text>
+<rect x="658.48" y="39" width="64" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="672.48" cy="51.75" r="3.5" fill="#FF7A1A"/><text x="682.48" y="55.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >MQL5</text>
+<rect x="30" y="86" width="940" height="44" rx="22" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M52 86.5 H948" stroke="#FFF4E8" stroke-opacity="0.4" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="113" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13" font-weight="600" fill="#B3A496" text-anchor="start" >Frameworks</text>
+<rect x="170" y="95" width="71" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="184" cy="107.75" r="3.5" fill="#FFB547"/><text x="194" y="111.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >React</text>
+<rect x="249.075" y="95" width="85" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="263.075" cy="107.75" r="3.5" fill="#FFB547"/><text x="273.075" y="111.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >FastAPI</text>
+<rect x="342.17999999999995" y="95" width="71" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="356.17999999999995" cy="107.75" r="3.5" fill="#FFB547"/><text x="366.17999999999995" y="111.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >Flask</text>
+<rect x="421.25499999999994" y="95" width="85" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="435.25499999999994" cy="107.75" r="3.5" fill="#FFB547"/><text x="445.25499999999994" y="111.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >Node.js</text>
+<rect x="514.3599999999999" y="95" width="71" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="528.3599999999999" cy="107.75" r="3.5" fill="#FFB547"/><text x="538.3599999999999" y="111.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >Unity</text>
+<rect x="593.435" y="95" width="106" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="607.435" cy="107.75" r="3.5" fill="#FFB547"/><text x="617.435" y="111.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >TensorFlow</text>
+<rect x="707.5849999999999" y="95" width="78" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="721.5849999999999" cy="107.75" r="3.5" fill="#FFB547"/><text x="731.5849999999999" y="111.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >OpenCV</text>
+<rect x="793.675" y="95" width="64" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="807.675" cy="107.75" r="3.5" fill="#FFB547"/><text x="817.675" y="111.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >YOLO</text>
+<rect x="30" y="142" width="940" height="44" rx="22" fill="url(#glass)" stroke="url(#edge)" stroke-width="1"/><path d="M52 142.5 H948" stroke="#FFF4E8" stroke-opacity="0.4" stroke-width="1" stroke-linecap="round"/>
+<text x="54" y="169" font-family="'Segoe UI Variable Display','Segoe UI','SF Pro Display',-apple-system,'Helvetica Neue','Leelawadee UI','Noto Sans Thai',Arial,sans-serif" font-size="13" font-weight="600" fill="#B3A496" text-anchor="start" >Tools</text>
+<rect x="170" y="151" width="57" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="184" cy="163.75" r="3.5" fill="#FFD9A8"/><text x="194" y="167.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >Git</text>
+<rect x="235.04500000000002" y="151" width="78" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="249.04500000000002" cy="163.75" r="3.5" fill="#FFD9A8"/><text x="259.045" y="167.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >Docker</text>
+<rect x="321.135" y="151" width="78" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="335.135" cy="163.75" r="3.5" fill="#FFD9A8"/><text x="345.135" y="167.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >DuckDB</text>
+<rect x="407.225" y="151" width="106" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="421.225" cy="163.75" r="3.5" fill="#FFD9A8"/><text x="431.225" y="167.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >PostgreSQL</text>
+<rect x="521.375" y="151" width="71" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="535.375" cy="163.75" r="3.5" fill="#FFD9A8"/><text x="545.375" y="167.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >ESP32</text>
+<rect x="600.45" y="151" width="120" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="614.45" cy="163.75" r="3.5" fill="#FFD9A8"/><text x="624.45" y="167.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >MetaTrader 5</text>
+<rect x="728.6300000000001" y="151" width="78" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="742.6300000000001" cy="163.75" r="3.5" fill="#FFD9A8"/><text x="752.6300000000001" y="167.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >Ollama</text>
+<rect x="814.7200000000001" y="151" width="78" height="25.5" rx="12.75" fill="#FFF4E8" fill-opacity="0.06" stroke="#FFD9A8" stroke-opacity="0.14"/><circle cx="828.7200000000001" cy="163.75" r="3.5" fill="#FFD9A8"/><text x="838.7200000000001" y="167.89" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="11.5" font-weight="500" fill="#F7EFE6" text-anchor="start" >Render</text>
 </svg>

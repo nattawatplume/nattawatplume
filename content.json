@@ -3,102 +3,101 @@
   "name_first": "Nattawat",
   "name_last": "Kampilanon",
   "nickname": "Plume",
-  "now": "currently building Gembot & VisMedS",
-  "headline": "I build things that see, talk and trade.",
+  "role": "Computer Engineering · KMUTT",
   "intro": [
-    "Computer Engineering student at KMUTT. I like taking an idea",
-    "off the whiteboard and making it actually run, on a phone,",
-    "on a robot, or on a live trading chart."
+    "I build AI tools, robots, trading systems and games.",
+    "Six of them are live. Links below."
   ],
-  "intro_th": "นักศึกษาวิศวะคอมฯ มจธ. ชอบทำของที่เอาไปใช้ได้จริง",
   "id_card": [
     ["Studying", "Computer Engineering, KMUTT"],
     ["Alumni", "PCSHS Lopburi"],
-    ["Into", "Vision · Robotics · Trading"],
+    ["Latest", "Market IDS"],
     ["Speaks", "Thai · English"]
   ],
-  "focus": [
-    {
-      "key": "SEE",
-      "title": "Computer vision",
-      "lines": ["Models that recognise pills,", "rocks and robots from a", "plain camera feed."],
-      "used": "TFLite · OpenCV · YOLO"
-    },
-    {
-      "key": "TALK",
-      "title": "Chatbots that behave",
-      "lines": ["LLM bots that answer from", "real data only, with safety", "rails for the risky stuff."],
-      "used": "FastAPI · LINE · Typhoon"
-    },
-    {
-      "key": "TRADE",
-      "title": "Trading systems",
-      "lines": ["Research bots on MT5 where", "the AI suggests and strict", "rules decide."],
-      "used": "MQL5 · Python · Ollama"
-    }
-  ],
   "projects": [
+    {
+      "slug": "market-ids",
+      "title": "Market IDS",
+      "category": "AI · Security",
+      "lines": [
+        "Watches Binance trades in real time and flags",
+        "moments that look like a pump. Rules, stats and",
+        "an ML model score every 10-second window."
+      ],
+      "tags": ["Python", "DuckDB", "Docker", "Render"],
+      "url": "https://market-ids.onrender.com/",
+      "show": "market-ids.onrender.com"
+    },
+    {
+      "slug": "rocket-rumble",
+      "title": "Island Rocket Rumble",
+      "category": "Game",
+      "lines": [
+        "Two players, one keyboard. Grab parts that fall",
+        "from the sky, craft a rocket, fire it at the other",
+        "island. Every 3D model is generated from code."
+      ],
+      "tags": ["Unity 6", "C#", "URP"],
+      "url": "https://github.com/nattawatplume/Game_My_Big_Rocket/releases/latest",
+      "show": "download for Windows"
+    },
     {
       "slug": "vismeds",
       "title": "VisMedS",
       "category": "AI · Vision",
-      "status": "Live",
       "lines": [
-        "Snap a photo of a medicine, get the facts.",
-        "A label search site, an image classifier and",
-        "a LINE bot that only answers from a checked",
-        "drug database."
+        "Point a camera at a medicine and get the facts.",
+        "Label search site, image classifier, and a LINE",
+        "bot that only answers from a checked drug list."
       ],
       "tags": ["Python", "TFLite", "FastAPI", "LINE API"],
-      "url": "https://github.com/nattawatplume/VisMedS_LineChatBot"
+      "url": "https://nattawatplume.github.io/med-label-web/",
+      "show": "nattawatplume.github.io/med-label-web"
     },
     {
       "slug": "gembot",
       "title": "Gembot Robot",
       "category": "Robotics",
-      "status": "Competition",
       "lines": [
-        "A robot that collects rocks on its own.",
-        "A camera reads the field, rock colours and",
-        "the robot's position, a 20 Hz planner picks",
-        "the next move, and an ESP32 drives."
+        "Competition robot that collects rocks by itself.",
+        "Overhead camera tracks the field and ArUco tags,",
+        "a 20 Hz planner picks moves, an ESP32 drives."
       ],
       "tags": ["Python", "OpenCV", "ArUco", "ESP32"],
-      "url": "https://github.com/nattawatplume/Gembot_Robot"
+      "url": "https://github.com/nattawatplume/Gembot_Robot",
+      "show": "github.com/nattawatplume/Gembot_Robot"
     },
     {
       "slug": "xauusd",
       "title": "XAUUSD AI Trader",
       "category": "Trading",
-      "status": "Research",
       "lines": [
-        "Gold trading research on MetaTrader 5.",
-        "An AI can suggest a trade, but the EA checks",
-        "every one and says no if anything looks off.",
-        "Not proven profitable, and I'm upfront about it."
+        "Gold trading on MetaTrader 5. A local or cloud",
+        "model proposes a trade, the EA checks risk",
+        "limits and decides. Python backtester included."
       ],
       "tags": ["MQL5", "Python", "Ollama", "Gemini"],
-      "url": "https://github.com/nattawatplume/Xauusd_Bot"
+      "url": "https://github.com/nattawatplume/Xauusd_Bot",
+      "show": "github.com/nattawatplume/Xauusd_Bot"
     },
     {
       "slug": "genworld",
       "title": "AI GenWorld",
-      "category": "Game",
-      "status": "Prototype",
+      "category": "Game · EdTech",
       "lines": [
-        "A city-building game for classrooms.",
-        "An LLM writes the events, every choice is a",
-        "trade-off, and a validator checks each one",
-        "before it reaches the players."
+        "City-building game for classrooms. An LLM writes",
+        "the events, each choice is a trade-off, and a",
+        "validator checks every event before play."
       ],
       "tags": ["Node.js", "JavaScript", "LLM API"],
-      "url": "https://github.com/nattawatplume/ai_genworldGame"
+      "url": "https://github.com/nattawatplume/ai_genworldGame",
+      "show": "github.com/nattawatplume/ai_genworldGame"
     }
   ],
   "stack": [
-    ["Languages", ["Python", "C", "C++", "TypeScript", "JavaScript", "MQL5", "HTML/CSS"]],
-    ["Building with", ["React", "FastAPI", "Flask", "Node.js", "TensorFlow", "OpenCV", "YOLO", "MediaPipe"]],
-    ["Tools", ["Git", "Docker", "PostgreSQL", "SQLite", "ESP32", "MetaTrader 5", "Ollama", "Gemini API"]]
+    ["Languages", ["Python", "C", "C++", "C#", "TypeScript", "JavaScript", "MQL5"]],
+    ["Frameworks", ["React", "FastAPI", "Flask", "Node.js", "Unity", "TensorFlow", "OpenCV", "YOLO"]],
+    ["Tools", ["Git", "Docker", "DuckDB", "PostgreSQL", "ESP32", "MetaTrader 5", "Ollama", "Render"]]
   ],
   "links": [
     ["portfolio", "Portfolio", "https://nattawatplume.github.io/portfolio/"],
