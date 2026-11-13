@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg" width="100%" alt="Nattawat Kampilanon (Plume). Computer Engineering at KMUTT. I build AI tools, robots, trading systems and games." />
+<img src="assets/hero.svg" width="100%" alt="Nattawat Kampilanon (Plume). Computer Engineering at KMUTT. Practice makes perfect." />
 
 <img src="assets/sections/dashboard.svg" width="100%" alt="Activity" />
 <img src="assets/dashboard.svg" width="100%" alt="Live GitHub dashboard: contributions, active days, live projects, repos and languages" />

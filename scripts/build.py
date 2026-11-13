@@ -195,6 +195,138 @@ def languages():
     return len([r for r in repos if not r["fork"]]), totals
 
 
+# ---------- animated pieces (SMIL, so it plays inside GitHub's <img>) ----------
+
+def motto(x, y, s, size=30):
+    """Types the motto out letter by letter, holds, erases, loops. A light
+    sweep runs across the letters the whole time."""
+    cw = size * 0.475  # rough advance per character at this weight
+    n = len(s)
+    dur, type_end, hold_end, erase_end = 9.0, 2.4, 7.4, 8.2
+    times, widths = [0.0], [0.0]
+    for k in range(1, n + 1):
+        times.append(type_end * k / n)
+        widths.append(k * cw)
+    times.append(hold_end)
+    widths.append(n * cw)
+    for k in range(n - 1, -1, -2):
+        times.append(hold_end + (erase_end - hold_end) * (n - k) / n)
+        widths.append(k * cw)
+    times.append(dur)
+    widths.append(0.0)
+    kt = ";".join(f"{v / dur:.4f}" for v in times)
+    wv = ";".join(f"{v:.1f}" for v in widths)
+    xv = ";".join(f"{x + v + 3:.1f}" for v in widths)
+    top = y - size
+    return f"""
+<defs>
+  <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="{x - 200}" y1="0" x2="{x + 200}" y2="0">
+    <stop offset="0" stop-color="{INK}"/><stop offset=".42" stop-color="{INK}"/>
+    <stop offset=".5" stop-color="{AMBER}"/><stop offset=".58" stop-color="{INK}"/>
+    <stop offset="1" stop-color="{INK}"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="-200 0;{n * cw + 200:.0f} 0"
+      dur="3.2s" repeatCount="indefinite"/>
+  </linearGradient>
+  <clipPath id="typed"><rect x="{x - 4}" y="{top - 6}" height="{size + 16}" width="0">
+    <animate attributeName="width" values="{wv}" keyTimes="{kt}" dur="{dur}s" calcMode="discrete" repeatCount="indefinite"/>
+  </rect></clipPath>
+</defs>
+<g clip-path="url(#typed)">{t(x, y, s, size, "url(#shine)", 700, extra='letter-spacing="-.4"')}</g>
+<rect x="{x}" y="{top + 2}" width="3" height="{size + 2}" rx="1.5" fill="{ORANGE}">
+  <animate attributeName="x" values="{xv}" keyTimes="{kt}" dur="{dur}s" calcMode="discrete" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur=".8s" repeatCount="indefinite"/>
+</rect>"""
+
+
+def ember_bot(x, y):
+    """Small original mascot: a robot with a flame on its antenna. It bobs,
+    blinks, looks around and waves while sparks drift up."""
+    ease = 'calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"'
+    sparks = "".join(
+        f'<circle cx="{dx}" cy="-128" r="{r}" fill="{c}" opacity="0">'
+        f'<animate attributeName="cy" values="-128;{-128 - rise}" dur="{d}s" begin="{bg}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="cx" values="{dx};{dx + drift}" dur="{d}s" begin="{bg}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="opacity" values="0;1;0" dur="{d}s" begin="{bg}s" repeatCount="indefinite"/>'
+        f'</circle>'
+        for dx, r, c, rise, drift, d, bg in [
+            (-4, 2.2, AMBER, 70, -14, 1.8, 0), (5, 1.6, SAND, 90, 12, 2.3, .6),
+            (0, 1.8, ORANGE, 60, 6, 1.6, 1.1), (-8, 1.3, SAND, 80, -20, 2.6, 1.6),
+            (9, 2.0, AMBER, 75, 18, 2.0, .3),
+        ]
+    )
+    shell = "#2A1A10"
+    return f"""
+<defs>
+  <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+    <stop offset="0" stop-color="{ORANGE}" stop-opacity=".55"/><stop offset="1" stop-color="{ORANGE}" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="shell" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3D2616"/><stop offset="1" stop-color="{shell}"/>
+  </linearGradient>
+</defs>
+<g transform="translate({x} {y}) scale(1.3)">
+  <circle cx="0" cy="-70" r="78" fill="url(#glow)">
+    <animate attributeName="r" values="72;84;72" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <ellipse cx="0" cy="0" rx="32" ry="5" fill="#000" opacity=".5">
+    <animate attributeName="rx" values="32;25;32" dur="2.8s" {ease} keyTimes="0;.5;1" repeatCount="indefinite"/>
+  </ellipse>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 0" keyTimes="0;.5;1"
+      dur="2.8s" {ease} repeatCount="indefinite"/>
+    <!-- legs -->
+    <rect x="-16" y="-16" width="10" height="13" rx="4" fill="{shell}" stroke="#FFD9A8" stroke-opacity=".15"/>
+    <rect x="6" y="-16" width="10" height="13" rx="4" fill="{shell}" stroke="#FFD9A8" stroke-opacity=".15"/>
+    <!-- body -->
+    <rect x="-25" y="-50" width="50" height="38" rx="13" fill="url(#shell)" stroke="url(#edge)"/>
+    <circle cx="0" cy="-31" r="7" fill="url(#heat)">
+      <animate attributeName="opacity" values="1;.45;1" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <!-- left arm -->
+    <rect x="-35" y="-46" width="9" height="25" rx="4.5" fill="#3A2416"/>
+    <!-- right arm, waving -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="0 30 -44;0 30 -44;-150 30 -44;-120 30 -44;-150 30 -44;-120 30 -44;-150 30 -44;0 30 -44;0 30 -44"
+        keyTimes="0;.45;.52;.57;.62;.67;.72;.8;1" dur="5s" repeatCount="indefinite"/>
+      <rect x="26" y="-46" width="9" height="25" rx="4.5" fill="#3A2416"/>
+      <circle cx="30.5" cy="-20" r="5.5" fill="{ORANGE}"/>
+    </g>
+    <circle cx="-30.5" cy="-20" r="5.5" fill="{ORANGE}"/>
+    <!-- antenna + flame -->
+    <path d="M0 -112 V-124" stroke="{SAND}" stroke-width="2.5" stroke-linecap="round"/>
+    <g transform="translate(0 -125)">
+      <g>
+        <animateTransform attributeName="transform" type="scale" values="1 1;.85 1.2;1.1 .9;.95 1.1;1 1"
+          dur=".7s" repeatCount="indefinite"/>
+        <path d="M0 0 C-9 -4 -8 -14 0 -24 C8 -14 9 -4 0 0 Z" fill="url(#heat)"/>
+        <path d="M0 -2 C-4 -4 -4 -9 0 -14 C4 -9 4 -4 0 -2 Z" fill="{SAND}"/>
+      </g>
+    </g>
+    {sparks}
+    <!-- head -->
+    <rect x="-47" y="-96" width="7" height="20" rx="3.5" fill="{ORANGE}"/>
+    <rect x="40" y="-96" width="7" height="20" rx="3.5" fill="{ORANGE}"/>
+    <rect x="-41" y="-114" width="82" height="60" rx="19" fill="url(#shell)" stroke="url(#edge)"/>
+    <rect x="-41" y="-114" width="82" height="30" rx="19" fill="#FFF4E8" fill-opacity=".06"/>
+    <rect x="-31" y="-104" width="62" height="36" rx="13" fill="#0B0604"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 0;5 0;5 0;-5 0;-5 0;0 0"
+        keyTimes="0;.3;.36;.55;.61;.85;1" dur="7s" repeatCount="indefinite"/>
+      <rect x="-17" y="-94" width="11" height="15" rx="5" fill="{AMBER}">
+        <animate attributeName="height" values="15;15;2;15;15" keyTimes="0;.9;.94;.98;1" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-94;-94;-87.5;-94;-94" keyTimes="0;.9;.94;.98;1" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="6" y="-94" width="11" height="15" rx="5" fill="{AMBER}">
+        <animate attributeName="height" values="15;15;2;15;15" keyTimes="0;.9;.94;.98;1" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="-94;-94;-87.5;-94;-94" keyTimes="0;.9;.94;.98;1" dur="4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <path d="M-6 -74 Q0 -70 6 -74" fill="none" stroke="{ORANGE}" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</g>"""
+
+
 # ---------- cards ----------
 
 def hero():
@@ -207,9 +339,9 @@ def hero():
     b.append(t(56, 160, DATA["name_first"], 70, INK, 700, extra='letter-spacing="-2"'))
     b.append(t(56, 232, DATA["name_last"], 70, "url(#fire)", 700, extra='letter-spacing="-2"'))
     b.append(t(60, 276, DATA["role"].upper(), 13, AMBER, 600, True, extra='letter-spacing="2.5"'))
-    for i, line in enumerate(DATA["intro"]):
-        b.append(t(60, 316 + i * 25, line, 16.5, MUTED))
     b.append('</g>')
+    b.append(motto(58, 334, DATA["motto"]))
+    b.append(ember_bot(526, 372))
 
     x, y, w, h = 616, 48, 336, 304
     b.append('<g class="rise" style="animation-delay:.15s">')
